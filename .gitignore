@@ -1,0 +1,14 @@
+dist/
+node_modules/
+*.pem
+.DS_Store
+Thumbs.db
+
+# Datos de tu tienda y resultados de las herramientas: nunca al repositorio
+tienda.config.json
+out/
+rec/
+overlay/
+contraste-*/
+lh-*.json
+a11y-*.json

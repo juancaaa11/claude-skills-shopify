@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380" role="img" aria-labelledby="t d">
+  <title id="t">Skills de Shopify para Claude</title>
+  <desc id="d">Tiendas Shopify rápidas, sin romper nada. Medir, diagnosticar, priorizar, cambiar, verificar.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#062a20"/>
+      <stop offset="0.55" stop-color="#0a3b2d"/>
+      <stop offset="1" stop-color="#071a15"/>
+    </linearGradient>
+    <radialGradient id="brillo1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#19c37d" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#19c37d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="brillo2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#b6f36b" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#b6f36b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="aro" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b6f36b"/>
+      <stop offset="1" stop-color="#19c37d"/>
+    </linearGradient>
+    <pattern id="rejilla" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+    <clipPath id="marco"><rect width="1200" height="380" rx="28"/></clipPath>
+    <clipPath id="escribir">
+      <rect class="tecleo" x="80" y="232" width="640" height="40"/>
+    </clipPath>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+    .luz1 { animation: flotar1 14s ease-in-out infinite; }
+    .luz2 { animation: flotar2 18s ease-in-out infinite; }
+    .tecleo { animation: teclear 9s steps(46, end) infinite; }
+    .cursor { animation: parpadeo 0.9s steps(1) infinite, mover 9s steps(46, end) infinite; }
+    .arco { stroke-dasharray: 452.4; stroke-dashoffset: 18.1; animation: llenar 9s cubic-bezier(.2,.8,.2,1) infinite; }
+    .nota { animation: aparecer 9s ease-out infinite; }
+    .chip { animation: latir 3.6s ease-in-out infinite; }
+    .chip.b { animation-delay: 1.2s; }
+    .chip.c { animation-delay: 2.4s; }
+    .raya { stroke-dasharray: 18 14; animation: correr 1.6s linear infinite; }
+    @keyframes flotar1 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(70px, 40px); } }
+    @keyframes flotar2 { 0%, 100% { transform: translate(0, 0); } 50% { transform: translate(-90px, -30px); } }
+    @keyframes teclear { 0% { width: 0; } 45%, 92% { width: 640px; } 100% { width: 0; } }
+    @keyframes mover { 0% { transform: translateX(0); } 45%, 92% { transform: translateX(606px); } 100% { transform: translateX(0); } }
+    @keyframes parpadeo { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+    @keyframes llenar { 0% { stroke-dashoffset: 452.4; } 28%, 94% { stroke-dashoffset: 18.1; } 100% { stroke-dashoffset: 452.4; } }
+    @keyframes aparecer { 0%, 8% { opacity: 0; } 26%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    @keyframes latir { 0%, 100% { opacity: 0.55; } 50% { opacity: 1; } }
+    @keyframes correr { to { stroke-dashoffset: -32; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <g clip-path="url(#marco)">
+    <rect width="1200" height="380" fill="url(#fondo)"/>
+    <rect width="1200" height="380" fill="url(#rejilla)"/>
+    <circle class="luz1" cx="230" cy="60" r="260" fill="url(#brillo1)"/>
+    <circle class="luz2" cx="1010" cy="330" r="300" fill="url(#brillo2)"/>
+
+    <!-- línea de velocidad -->
+    <path class="raya" d="M80 322H720" stroke="#19c37d" stroke-opacity="0.55" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- rótulo -->
+    <rect x="80" y="56" width="268" height="34" rx="17" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.16"/>
+    <circle cx="100" cy="73" r="5" fill="#b6f36b"/>
+    <text x="114" y="78.500" font-size="14" font-weight="600" letter-spacing="2.2" fill="#d9f7e8">CLAUDE SKILLS · SHOPIFY</text>
+
+    <!-- titular -->
+    <text x="78" y="150" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="-1">Tiendas Shopify rápidas,</text>
+    <text x="78" y="208" font-size="52" font-weight="800" fill="#b6f36b" letter-spacing="-1">sin romper nada.</text>
+
+    <!-- línea que se escribe -->
+    <g clip-path="url(#escribir)">
+      <text x="80" y="259" font-size="21" font-weight="500" fill="#c9eedb" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" style="font-family: Consolas, 'SFMono-Regular', Menlo, monospace">medir → diagnosticar → priorizar → cambiar → verificar</text>
+    </g>
+    <rect class="cursor" x="84" y="240" width="2.500" height="24" fill="#b6f36b"/>
+
+    <!-- métricas -->
+    <g font-size="13" font-weight="700" letter-spacing="1.4" fill="#062a20">
+      <g class="chip"><rect x="80" y="340" width="62" height="24" rx="12" fill="#b6f36b"/><text x="111" y="356.500" text-anchor="middle">LCP</text></g>
+      <g class="chip b"><rect x="152" y="340" width="62" height="24" rx="12" fill="#b6f36b"/><text x="183" y="356.500" text-anchor="middle">INP</text></g>
+      <g class="chip c"><rect x="224" y="340" width="62" height="24" rx="12" fill="#b6f36b"/><text x="255" y="356.500" text-anchor="middle">CLS</text></g>
+    </g>
+    <text x="304" y="357" font-size="14" fill="#9fd4bb">diseño, compra y medición intactos</text>
+
+    <!-- marcador -->
+    <g transform="translate(960 190)">
+      <circle r="104" fill="#04130f" fill-opacity="0.55" stroke="#ffffff" stroke-opacity="0.08"/>
+      <circle r="72" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="12"/>
+      <circle class="arco" r="72" fill="none" stroke="url(#aro)" stroke-width="12" stroke-linecap="round" transform="rotate(-90)"/>
+      <g class="nota">
+        <text y="16" text-anchor="middle" font-size="58" font-weight="800" fill="#ffffff">96</text>
+        <text y="40" text-anchor="middle" font-size="11" font-weight="600" letter-spacing="1.6" fill="#9fd4bb">PAGESPEED</text>
+      </g>
+      <text y="136" text-anchor="middle" font-size="13" fill="#9fd4bb">móvil · caso real · antes 90</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-labelledby="t d">
+  <title id="t">Resultados de un caso real</title>
+  <desc id="d">Ficha de producto de una tienda Shopify. PageSpeed móvil de 90 a 96. Foto principal de 3,06 a 2,41 segundos. Formulario de pedido listo de 7,3 a 2,7 segundos.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a15"/>
+      <stop offset="1" stop-color="#0a3327"/>
+    </linearGradient>
+    <linearGradient id="verde" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#19c37d"/>
+      <stop offset="1" stop-color="#b6f36b"/>
+    </linearGradient>
+    <clipPath id="marco"><rect width="1200" height="330" rx="24"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+    .tarjeta { fill: #ffffff; fill-opacity: 0.05; stroke: #ffffff; stroke-opacity: 0.1; }
+    .antes { fill: #ffffff; fill-opacity: 0.22; transform-box: fill-box; transform-origin: left center; animation: crecer 8s cubic-bezier(.2,.8,.2,1) infinite; }
+    .despues { fill: url(#verde); transform-box: fill-box; transform-origin: left center; animation: crecer 8s cubic-bezier(.2,.8,.2,1) infinite; animation-delay: 0.5s; }
+    .arco { stroke-dasharray: 339.300; stroke-dashoffset: 13.600; animation: llenar 8s cubic-bezier(.2,.8,.2,1) infinite; }
+    .cifra { animation: aparecer 8s ease-out infinite; }
+    @keyframes crecer { 0% { transform: scaleX(0); } 22%, 94% { transform: scaleX(1); } 100% { transform: scaleX(0); } }
+    @keyframes llenar { 0% { stroke-dashoffset: 339.300; } 26%, 94% { stroke-dashoffset: 13.600; } 100% { stroke-dashoffset: 339.300; } }
+    @keyframes aparecer { 0%, 10% { opacity: 0; } 26%, 94% { opacity: 1; } 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <g clip-path="url(#marco)">
+    <rect width="1200" height="330" fill="url(#fondo)"/>
+    <text x="60" y="52" font-size="14" font-weight="600" letter-spacing="2.2" fill="#9fd4bb">UN CASO REAL · FICHA DE PRODUCTO EN MÓVIL</text>
+
+    <!-- PageSpeed -->
+    <rect class="tarjeta" x="60" y="76" width="340" height="190" rx="18"/>
+    <text x="84" y="110" font-size="15" font-weight="700" fill="#ffffff">PageSpeed móvil</text>
+    <g transform="translate(150 186)">
+      <circle r="54" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="10"/>
+      <circle class="arco" r="54" fill="none" stroke="url(#verde)" stroke-width="10" stroke-linecap="round" transform="rotate(-90)"/>
+      <text class="cifra" y="15" text-anchor="middle" font-size="42" font-weight="800" fill="#ffffff">96</text>
+    </g>
+    <text x="232" y="172" font-size="14" fill="#9fd4bb">antes</text>
+    <text x="232" y="204" font-size="30" font-weight="800" fill="#ffffff" fill-opacity="0.55">90</text>
+    <text x="232" y="232" font-size="12" fill="#9fd4bb">accesibilidad 71 → 100</text>
+
+    <!-- LCP -->
+    <rect class="tarjeta" x="430" y="76" width="340" height="190" rx="18"/>
+    <text x="454" y="110" font-size="15" font-weight="700" fill="#ffffff">Foto principal (LCP)</text>
+    <text x="454" y="148" font-size="13" fill="#9fd4bb">antes</text>
+    <rect class="antes" x="454" y="156" width="292" height="16" rx="8"/>
+    <text x="746" y="148" text-anchor="end" font-size="15" font-weight="700" fill="#ffffff" fill-opacity="0.6">3,06 s</text>
+    <text x="454" y="206" font-size="13" fill="#9fd4bb">después</text>
+    <rect class="despues" x="454" y="214" width="230" height="16" rx="8"/>
+    <text x="746" y="206" text-anchor="end" font-size="15" font-weight="800" fill="#b6f36b">2,41 s</text>
+    <text x="454" y="252" font-size="12" fill="#9fd4bb">móvil lento de laboratorio</text>
+
+    <!-- Formulario -->
+    <rect class="tarjeta" x="800" y="76" width="340" height="190" rx="18"/>
+    <text x="824" y="110" font-size="15" font-weight="700" fill="#ffffff">Se puede comprar desde…</text>
+    <text x="824" y="148" font-size="13" fill="#9fd4bb">antes</text>
+    <rect class="antes" x="824" y="156" width="292" height="16" rx="8"/>
+    <text x="1116" y="148" text-anchor="end" font-size="15" font-weight="700" fill="#ffffff" fill-opacity="0.6">7,3 s</text>
+    <text x="824" y="206" font-size="13" fill="#9fd4bb">después</text>
+    <rect class="despues" x="824" y="214" width="108" height="16" rx="8"/>
+    <text x="1116" y="206" text-anchor="end" font-size="15" font-weight="800" fill="#b6f36b">2,7 s</text>
+    <text x="824" y="252" font-size="12" fill="#9fd4bb">formulario de pedido listo</text>
+
+    <text x="60" y="300" font-size="13" fill="#9fd4bb">Cifras de laboratorio de una tienda concreta. Sirven de ejemplo, no de promesa: en cada tienda se vuelve a medir.</text>
+  </g>
+</svg>

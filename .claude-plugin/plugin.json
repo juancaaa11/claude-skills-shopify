@@ -1,0 +1,13 @@
+{
+  "name": "shopify-skills",
+  "description": "Rendimiento y cambios seguros en tiendas Shopify que ya están vendiendo: medir, diagnosticar, priorizar, cambiar y verificar sin romper el diseño, la compra ni la medición.",
+  "version": "1.0.0",
+  "author": {
+    "name": "juancaaa11",
+    "url": "https://github.com/juancaaa11"
+  },
+  "homepage": "https://github.com/juancaaa11/claude-skills-shopify",
+  "repository": "https://github.com/juancaaa11/claude-skills-shopify",
+  "license": "MIT",
+  "keywords": ["shopify", "rendimiento", "pagespeed", "core-web-vitals", "liquid"]
+}

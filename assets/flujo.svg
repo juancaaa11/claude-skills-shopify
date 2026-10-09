@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 270" width="1200" height="270" role="img" aria-labelledby="t d">
+  <title id="t">El flujo de trabajo en ocho pasos</title>
+  <desc id="d">Entender, línea base, localizar causas, priorizar, cambios pequeños, antes y después, comprobar, informar.</desc>
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071a15"/>
+      <stop offset="1" stop-color="#0a3327"/>
+    </linearGradient>
+    <linearGradient id="linea" gradientUnits="userSpaceOnUse" x1="90" y1="0" x2="1110" y2="0">
+      <stop offset="0" stop-color="#19c37d"/>
+      <stop offset="1" stop-color="#b6f36b"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#b6f36b" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#b6f36b" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="marco"><rect width="1200" height="270" rx="24"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; }
+    .paso circle.punto { fill: #0f4a38; stroke: #19c37d; stroke-width: 2; animation: encender 12s linear infinite; }
+    .paso text.num { fill: #d9f7e8; animation: numero 12s linear infinite; }
+    .paso.p1 circle.punto, .paso.p1 text.num { animation-delay: 0s; }
+    .paso.p2 circle.punto, .paso.p2 text.num { animation-delay: 1.5s; }
+    .paso.p3 circle.punto, .paso.p3 text.num { animation-delay: 3s; }
+    .paso.p4 circle.punto, .paso.p4 text.num { animation-delay: 4.5s; }
+    .paso.p5 circle.punto, .paso.p5 text.num { animation-delay: 6s; }
+    .paso.p6 circle.punto, .paso.p6 text.num { animation-delay: 7.5s; }
+    .paso.p7 circle.punto, .paso.p7 text.num { animation-delay: 9s; }
+    .paso.p8 circle.punto, .paso.p8 text.num { animation-delay: 10.5s; }
+    .trazo { stroke-dasharray: 1020; stroke-dashoffset: 0; animation: trazar 12s linear infinite; }
+    @keyframes encender { 0% { fill: #b6f36b; stroke: #b6f36b; } 10% { fill: #b6f36b; stroke: #b6f36b; } 16%, 100% { fill: #0f4a38; stroke: #19c37d; } }
+    @keyframes numero { 0%, 10% { fill: #062a20; } 16%, 100% { fill: #d9f7e8; } }
+    @keyframes trazar { 0% { stroke-dashoffset: 1020; } 87.500%, 100% { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .viajero { display: none; } }
+  </style>
+
+  <g clip-path="url(#marco)">
+    <rect width="1200" height="270" fill="url(#fondo)"/>
+    <text x="60" y="52" font-size="14" font-weight="600" letter-spacing="2.2" fill="#9fd4bb">EL FLUJO · NINGÚN PASO SE SALTA</text>
+
+    <path d="M90 120H1110" stroke="#ffffff" stroke-opacity="0.12" stroke-width="3" stroke-linecap="round"/>
+    <path class="trazo" d="M90 120H1110" stroke="url(#linea)" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+    <g class="viajero">
+      <circle r="16" fill="url(#halo)">
+        <animateMotion dur="12s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;0.875;1" calcMode="linear" path="M90 120H1110"/>
+      </circle>
+    </g>
+
+    <g font-weight="700" font-size="17" text-anchor="middle">
+      <g class="paso p1"><circle class="punto" cx="90" cy="120" r="21"/><text class="num" x="90" y="126">1</text></g>
+      <g class="paso p2"><circle class="punto" cx="235.700" cy="120" r="21"/><text class="num" x="235.700" y="126">2</text></g>
+      <g class="paso p3"><circle class="punto" cx="381.400" cy="120" r="21"/><text class="num" x="381.400" y="126">3</text></g>
+      <g class="paso p4"><circle class="punto" cx="527.100" cy="120" r="21"/><text class="num" x="527.100" y="126">4</text></g>
+      <g class="paso p5"><circle class="punto" cx="672.900" cy="120" r="21"/><text class="num" x="672.900" y="126">5</text></g>
+      <g class="paso p6"><circle class="punto" cx="818.600" cy="120" r="21"/><text class="num" x="818.600" y="126">6</text></g>
+      <g class="paso p7"><circle class="punto" cx="964.300" cy="120" r="21"/><text class="num" x="964.300" y="126">7</text></g>
+      <g class="paso p8"><circle class="punto" cx="1110" cy="120" r="21"/><text class="num" x="1110" y="126">8</text></g>
+    </g>
+
+    <g text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">
+      <text x="90" y="176">Entender</text>
+      <text x="235.700" y="176">Línea base</text>
+      <text x="381.400" y="176">Causas</text>
+      <text x="527.100" y="176">Priorizar</text>
+      <text x="672.900" y="176">Cambiar</text>
+      <text x="818.600" y="176">Comparar</text>
+      <text x="964.300" y="176">Comprobar</text>
+      <text x="1110" y="176">Informar</text>
+    </g>
+    <g text-anchor="middle" font-size="12" fill="#9fd4bb">
+      <text x="90" y="197">la página y</text><text x="90" y="213">el problema</text>
+      <text x="235.700" y="197">condiciones</text><text x="235.700" y="213">comparables</text>
+      <text x="381.400" y="197">sin culpar</text><text x="381.400" y="213">a Shopify</text>
+      <text x="527.100" y="197">impacto,</text><text x="527.100" y="213">esfuerzo, riesgo</text>
+      <text x="672.900" y="197">pequeño y</text><text x="672.900" y="213">reversible</text>
+      <text x="818.600" y="197">antes y</text><text x="818.600" y="213">después</text>
+      <text x="964.300" y="197">diseño, compra</text><text x="964.300" y="213">y medición</text>
+      <text x="1110" y="197">resultados</text><text x="1110" y="213">y límites</text>
+    </g>
+  </g>
+</svg>

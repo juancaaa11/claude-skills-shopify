@@ -1,0 +1,59 @@
+{
+  "tienda": "https://tu-tienda.example",
+
+  "paginas": [
+    { "nombre": "producto", "ruta": "products/tu-producto" },
+    { "nombre": "inicio", "ruta": "" },
+    { "nombre": "coleccion", "ruta": "collections/all" },
+    { "nombre": "busqueda", "ruta": "search?q=prueba" },
+    { "nombre": "carrito", "ruta": "cart" },
+    { "nombre": "contacto", "ruta": "pages/contact" },
+    { "nombre": "404", "ruta": "pagina-que-no-existe" }
+  ],
+  "paginasPrincipales": ["producto", "inicio"],
+
+  "marcas": {
+    "botonCompraEnDom": { "selector": "[name='add'], .product-form__submit" },
+    "barraFijaVisible": { "selector": ".barra-compra-fija", "visible": true },
+    "formularioListo": { "global": "miFormulario.listo" },
+    "bannerCookies": { "selector": "#shopify-pc__banner, .shopify-pc__banner__dialog" }
+  },
+
+  "scrollEscritorio": "",
+  "cssCapturas": "#shopify-pc__banner,.shopify-pc__banner__dialog,#PBarNextFrameWrapper,#preview-bar-iframe{display:none!important}",
+
+  "apiPropia": {
+    "patron": "^https://api-de-pedidos\\.example/",
+    "respuestas": [
+      { "ruta": "/sesiones", "status": 201, "body": { "token": "simulado", "total": 2999, "moneda": "EUR" } }
+    ],
+    "nuncaCrear": ["/pedidos"]
+  },
+
+  "jsPropio": "/assets/mi-",
+
+  "contraste": [
+    ["precio-tachado", ".price s, .price--compare"],
+    ["texto-secundario", ".texto-secundario"],
+    ["pie", "footer p"]
+  ],
+
+  "repasoPrevio": {
+    "salud": "",
+    "destinos": [
+      { "url": "https://tu-tienda.example/products/tu-producto", "producto": "tu-producto" },
+      { "url": "http://tu-tienda.example/products/tu-producto" },
+      { "url": "https://www.tu-tienda.example/products/tu-producto" }
+    ],
+    "comprobaciones": [
+      {
+        "nombre": "pedido con token inventado: debe rechazarse",
+        "metodo": "POST",
+        "url": "https://api-de-pedidos.example/pedidos",
+        "origen": "https://tu-tienda.example",
+        "cuerpo": { "token": "inventado" },
+        "esperado": [400, 401, 403]
+      }
+    ]
+  }
+}

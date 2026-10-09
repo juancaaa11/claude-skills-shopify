@@ -1,0 +1,15 @@
+{
+  "name": "juancaaa11-skills",
+  "description": "Skills de @juancaaa11 para Claude",
+  "owner": {
+    "name": "juancaaa11",
+    "url": "https://github.com/juancaaa11"
+  },
+  "plugins": [
+    {
+      "name": "shopify-skills",
+      "source": "./",
+      "description": "Dos skills para tiendas Shopify: optimizar la carga con método y publicar cambios en una tienda activa sin romper nada."
+    }
+  ]
+}
